@@ -31,7 +31,7 @@ const App = () => {
 
   const send = () => {
     setStatus(true);
-    axios.post("http://localhost:3000/sendmail", { msg: msg, emailList: emailList })
+    axios.post("https://bulkmail-backend-reju.onrender.com/sendmail", { msg: msg, emailList: emailList })
       .then((res) => {
         if (res.data === true) {
           alert("Mails sent successfully");
